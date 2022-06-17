@@ -1,5 +1,5 @@
 {
-  "homepage": "https://majestic-gumption-a4b977.netlify.app/",
+  "homepage": "https://node-with-react-login.herokuapp.com/",
   "name": "client",
   "version": "0.1.0",
   "private": true,
@@ -27,7 +27,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "https://node-with-react-login.herokuapp.com/",
   "eslintConfig": {
     "extends": [
       "react-app",
