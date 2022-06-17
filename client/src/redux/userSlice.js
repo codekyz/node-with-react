@@ -4,7 +4,10 @@ import axios from "axios";
 export const requestUserLogin = createAsyncThunk(
   "user/requestUserLogin",
   async (payload) => {
-    const response = await axios.post("/api/users/login", payload);
+    const response = await axios.post(
+      "https://node-with-react-login.herokuapp.com/api/users/login",
+      payload
+    );
     return response.data;
   }
 );
@@ -12,7 +15,10 @@ export const requestUserLogin = createAsyncThunk(
 export const requestUserRegister = createAsyncThunk(
   "user/requestUserRegister",
   async (payload) => {
-    const response = await axios.post("/api/users/register", payload);
+    const response = await axios.post(
+      "https://node-with-react-login.herokuapp.com/api/users/register",
+      payload
+    );
     return response.data;
   }
 );
@@ -20,7 +26,9 @@ export const requestUserRegister = createAsyncThunk(
 export const requestUserAuth = createAsyncThunk(
   "user/requestUserAuth",
   async () => {
-    const response = await axios.get("/api/users/auth");
+    const response = await axios.get(
+      "https://node-with-react-login.herokuapp.com/api/users/auth"
+    );
     return response.data;
   }
 );

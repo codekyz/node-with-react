@@ -21,13 +21,15 @@ function LandingPage() {
     if (!user.isAuth) {
       navigate("/login");
     } else {
-      axios.get("/api/users/logout").then((response) => {
-        if (response.data.success) {
-          navigate("/login");
-        } else {
-          alert("로그아웃 실패");
-        }
-      });
+      axios
+        .get("https://node-with-react-login.herokuapp.com/api/users/logout")
+        .then((response) => {
+          if (response.data.success) {
+            navigate("/login");
+          } else {
+            alert("로그아웃 실패");
+          }
+        });
     }
   };
 
