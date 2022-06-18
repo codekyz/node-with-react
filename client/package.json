@@ -21,7 +21,6 @@
     "redux-thunk": "^2.4.1",
     "web-vitals": "^2.1.4"
   },
-  "proxy": "https://node-with-react-login.herokuapp.com",
   "scripts": {
     "start": "react-scripts start",
     "build": "CI= react-scripts build",
