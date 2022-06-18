@@ -1,10 +1,10 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import axios from "axios";
+import customAxios from "../utils/customAxios";
 
 export const requestUserLogin = createAsyncThunk(
   "user/requestUserLogin",
   async (payload) => {
-    const response = await axios.post("/api/users/login", payload);
+    const response = await customAxios.post("/api/users/login", payload);
     return response.data;
   }
 );
@@ -12,7 +12,7 @@ export const requestUserLogin = createAsyncThunk(
 export const requestUserRegister = createAsyncThunk(
   "user/requestUserRegister",
   async (payload) => {
-    const response = await axios.post("/api/users/register", payload);
+    const response = await customAxios.post("/api/users/register", payload);
     return response.data;
   }
 );
@@ -20,7 +20,7 @@ export const requestUserRegister = createAsyncThunk(
 export const requestUserAuth = createAsyncThunk(
   "user/requestUserAuth",
   async () => {
-    const response = await axios.get("/api/users/auth");
+    const response = await customAxios.get("/api/users/auth");
     return response.data;
   }
 );
