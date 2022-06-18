@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 const app = express();
 const port = process.env.PORT || 5000;
 const bodyParser = require("body-parser");
@@ -8,6 +9,13 @@ const config = require("./config/key");
 
 const { auth } = require("./middleware/auth");
 const { User } = require("./models/User");
+
+app.use(
+  cors({
+    origin: true,
+    credentials: true,
+  })
+);
 
 // application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
