@@ -12,8 +12,9 @@ const { User } = require("./models/User");
 
 app.use(
   cors({
-    origin: true,
+    origin: "https://majestic-gumption-a4b977.netlify.app",
     credentials: true,
+    origin: true,
   })
 );
 
