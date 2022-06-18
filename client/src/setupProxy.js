@@ -4,7 +4,7 @@ module.exports = function (app) {
   app.use(
     "/api",
     createProxyMiddleware({
-      target: "https://node-with-react-login.herokuapp.com/",
+      target: "https://node-with-react-login.herokuapp.com",
       changeOrigin: true,
     })
   );

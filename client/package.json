@@ -1,5 +1,5 @@
 {
-  "homepage": "https://node-with-react-login.herokuapp.com/",
+  "homepage": "https://majestic-gumption-a4b977.netlify.app/",
   "name": "client",
   "version": "0.1.0",
   "private": true,
@@ -21,6 +21,7 @@
     "redux-thunk": "^2.4.1",
     "web-vitals": "^2.1.4"
   },
+  "proxy": "https://node-with-react-login.herokuapp.com",
   "scripts": {
     "start": "react-scripts start",
     "build": "CI= react-scripts build",
